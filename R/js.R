@@ -12,15 +12,33 @@ convert_to_js_array <- function(vector) {
 
   string <- ' [  '
 
-  for (emo in vector) {
-    string <- paste0(string, '"', emo, '"', ',')
+  for (para in vector) {
+    string <- paste0(string, '"', para, '"', ',')
   }
 
-  emojis_vector_html <- paste0(string, ']')
+  js_array <- paste0(string, '], ')
+
+  return(js_array)
 
 }
 
 
+
+
+#' Title
+#'
+#' @param argument The argument name
+#' @param argument_vector A vector of parameters to the argument
+#'
+#' @export
+js_argument <- function(argument, argument_vector) {
+
+  js_array <- confetti::convert_to_js_array(argument_vector)
+
+  js <- paste0(argument, ': ', js_array)
+
+  return(js)
+}
 
 
 
@@ -38,28 +56,8 @@ emojis_js <- function(emojis_vector = 'Default') {
     emojis_vector <- c("🌈", "⚡️", "💥")
   }
 
+  js <- js_argument('emojis', emojis_vector)
 
-  emojis_vector_html <- convert_to_js_array(emojis_vector)
+  return(js)
 
-  paste0(
-
-    '
-
-   emojis: [
-
-  ' ,
-
-    emojis_vector_html,
-
-    '
-
-    ]
-
-    '
-
-  )
 }
-
-
-
-

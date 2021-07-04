@@ -1,12 +1,12 @@
 Package: confetti
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Creates Rmarkdown widgets 
 Version: 0.1.0
-Author: Who wrote it
+Author: Authors@R: person("Joshua", "Halls", email = "joshuah40@gmail.com",
+  role = c("aut", "cre"))
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Description: Fun Rmarkdown widgets 
+License: MIT
 Encoding: UTF-8
 LazyData: true
 Suggests: 

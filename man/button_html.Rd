@@ -4,7 +4,7 @@
 \alias{button_html}
 \title{Title}
 \usage{
-button_html(button_text, emojis = "Default")
+button_html(button_text, config = "Default")
 }
 \arguments{
 \item{button_text}{The text of the button}

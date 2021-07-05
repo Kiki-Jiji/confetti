@@ -4,13 +4,13 @@
 \alias{confetti_button}
 \title{Title}
 \usage{
-confetti_button(button_text = "Click me!", emojis = "Default")
+confetti_button(button_text = "Click me!", config = "Default")
 }
 \arguments{
 \item{button_text}{The text of the button, default = 'Click me!'}
 
-\item{emojis}{emojis = "Default" provides some pre-selected emojis. emojis = 'None'
-is non emojis, just confetti}
+\item{config}{config = "Default" provides some pre-selected emojis. config = 'None'
+is just confetti}
 }
 \description{
 Creates a button with a suprise!

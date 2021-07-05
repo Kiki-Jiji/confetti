@@ -41,6 +41,40 @@ js_argument <- function(argument, argument_vector) {
 }
 
 
+#' Title
+#'
+#' @param config A names list where the name is the argument and the value is
+#' the parameter or parameters for that argument
+#'
+#' @export
+
+create_js_config <- function(config) {
+
+  arguments_string <- ''
+
+  for (arg in names(config)) {
+
+      if (length(config[[arg]]) == 1) {
+
+          arguments_string <- paste0(arguments_string,
+                                   paste0(arg, ' : ', config[[arg]], ', ')
+        )
+
+      } else if (length(config[[arg]]) > 1) {
+
+          arguments_string <- paste0(arguments_string,
+                                   confetti::js_argument(arg, config[[arg]])
+        )
+
+      } else {
+          warning('Argument provided with no parameters')
+      }
+
+  }
+
+    return(arguments_string)
+
+}
 
 
 #' Title

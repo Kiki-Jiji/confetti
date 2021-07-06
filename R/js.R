@@ -87,7 +87,9 @@ create_js_config <- function(config) {
 emojis_js <- function(emojis_vector = 'Default') {
 
   if (emojis_vector == 'Default') {
-    emojis_vector <- c("🌈", "⚡️", "💥")
+
+    emojis_vector <- c( "\U0001f308", "\U0001f525" )
+
   }
 
   js <- js_argument('emojis', emojis_vector)

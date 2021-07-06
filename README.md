@@ -30,18 +30,45 @@ You can also supply a config to affect the behaviour such as the choice of emoji
 You can also change the button name
 
 ```{r}
-config <- list('emojis' = c("🌈", "⚡", "💥"),
-               'confettiNumber' = 600,
+# rainbow = "\U0001f308"
+# flashlight = "\U0001f526"
+# dog = "\U0001f436"
+
+config <- list('emojis' = c("\U0001f308", "\U0001f526", "\U0001f436"),
+               'confettiNumber' = 300,
                'confettiColors' = c('#ff0a54', '#ff477e', '#ff7096', '#ff85a1', '#fbb1bd', '#f9bec7')
 )
 
+confetti::confetti_button(button_text = "CLick me!",  config = config)
 
-
-confetti::confetti_button(button_text = "I am a button",  config = config)
 
 ```
 
-> You can supply any valid emoji! One source is [emojipedia](https://emojipedia.org/)
+> You can supply any valid emoji! Sources include [emojipedia](https://emojipedia.org/) or unicode[https://apps.timwhitlock.info/emoji/tables/unicode]
+
+You can use the [emojifont](https://cran.r-project.org/web/packages/emojifont/vignettes/emojifont.html) package to find emojis or to RAP the emoji selection
+
+```r
+
+config <- list('emojis' = sapply(sample(emojifont::sample_emoji(), 3), emojifont::emoji))
+
+
+confetti::confetti_button(button_text = "CLick me!",  config = config)
+
+# Everytime you knit you get 3 new emojis! Very efficient
+
+```
+
+## DIY
+
+Maybe you want to build your own html but add confetti?
+
+Simply use the `confetti::diy_confetti()` and the `trigger_con` javascript function is available to use! It's a Create your own, fun for the whole family, type of thing.
+
+```html
+<h1 onmouseover="trigger_con()"> Latest GDP Figures</h1>
+```
+Now people get the ... fun of confetti whenever they even hover over your titles! No more clicking needed!
 
 ## config
 

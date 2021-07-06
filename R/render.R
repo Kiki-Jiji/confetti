@@ -1,5 +1,31 @@
 
+#' Title
+#'
+#' @param button_text The text of the button
+#' @param emojis emojis = "Default" provides some pre-selected emojis. emojis = 'None'
+#' is non emojis, just confetti
+#'
+#' @export
 
+diy_confetti <-function(button_text, config = "Default" ) {
+
+  cdn_link <- confetti::js_cdn()
+
+  if (class(config) == 'list') {
+    args <- confetti::create_js_config(config)
+  } else if (config == "Default") {
+    args <- confetti::emojis_js(config)
+  } else if (config == "None" ) {
+    args = " "
+  }
+
+  js <- confetti::javascript_config(args)
+
+  html <- paste0(cdn_link, js)
+
+  knitr::raw_html(html)
+
+}
 
 #' Title
 #'

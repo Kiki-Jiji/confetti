@@ -2,6 +2,7 @@
 
 export(button_html)
 export(confetti_button)
+export(confetti_on_page_load)
 export(convert_to_js_array)
 export(create_js_config)
 export(diy_confetti)

@@ -73,4 +73,40 @@ javascript_config <- function(arguments) {
 
 
 
+#' Title
+#'
+#' @return
+#' @export
+
+confetti_on_page_load <- function(config) {
+
+  if(missing(config)) {
+    arguments <- ""
+  } else {
+    arguments <- create_js_config(config)
+  }
+
+
+  html <- paste0(js_cdn(),
+  '
+    <script>
+
+    const jsConfetti = new JSConfetti()
+
+    jsConfetti.addConfetti({
+
+    ', arguments ,
+
+  '
+
+    })
+
+    </script>
+
+  '
+  )
+
+  knitr::raw_html(html)
+
+}
 

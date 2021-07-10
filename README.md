@@ -1,6 +1,8 @@
 # confetti
 An rmarkdown extension to add confetti!
 
+<img src="assets/highlight.gif" width="600px" />
+
 Have you ever been working on a report or producing a statistical publication and thought how to I add a confetti button? 
 
 Well this R package has been developed to make this routine task easier with pre-built html widgets that can be slotted into an rmarkdown report to add some jazz.
@@ -25,6 +27,9 @@ library(confetti)
 confetti_button()
 
 ```
+
+<img src="assets/setup_demo.gif" width="600px" />
+
 
 You can also supply a config to affect the behaviour such as the choice of emojis or the number. 
 You can also change the button name

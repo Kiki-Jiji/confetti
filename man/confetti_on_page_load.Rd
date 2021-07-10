@@ -4,7 +4,7 @@
 \alias{confetti_on_page_load}
 \title{Title}
 \usage{
-confetti_on_page_load()
+confetti_on_page_load(config)
 }
 \value{
 

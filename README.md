@@ -28,7 +28,7 @@ confetti_button()
 
 ```
 
-<img src="assets/setup_demo.gif" width="600px" />
+<img src="assets/setup_demo2.gif" width="600px" />
 
 
 You can also supply a config to affect the behaviour such as the choice of emojis or the number. 

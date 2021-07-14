@@ -3,7 +3,7 @@ An rmarkdown extension to add confetti!
 
 <img src="assets/highlight.gif" width="600px" />
 
-Have you ever been working on a report or producing a statistical publication and thought how to I add a confetti button? 
+Have you ever been working on a report or producing a statistical publication and thought how do I add a confetti button? 
 
 Well this R package has been developed to make this routine task easier with pre-built html widgets that can be slotted into an rmarkdown report to add some jazz.
 
